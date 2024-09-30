@@ -20,4 +20,53 @@ export async function fetchOneNote(id) {
     } 
 }
 
-console.log(await fetchOneNote(8));
+export async function addNote(note) {
+    try {
+        var response = await axios.post(`https://localhost:7178/Tasks`, note)
+        return response.status;
+    }
+    catch (e) {
+        console.error(e);
+    } 
+}
+
+export async function checkNote(id) {
+    try {
+        var response = await axios.patch(`https://localhost:7178/Tasks/${id}`)
+        return response.status;
+    }
+    catch (e) {
+        console.error(e);
+    } 
+}
+
+export async function deleteNote(id) {
+    try {
+        var response = await axios.delete(`https://localhost:7178/Tasks/${id}`)
+        return response.status;
+    }
+    catch (e) {
+        console.error(e);
+    } 
+}
+
+export async function changeNote(id, newNote) {
+    try {
+        var response = await axios.put(`https://localhost:7178/Tasks/${id}`, newNote)
+        return response.status;
+    }
+    catch (e) {
+        console.error(e);
+    } 
+}
+
+export async function uploadNotes(notesList) {
+    try {
+        var response = await axios.post(`https://localhost:7178/Tasks/upload`, notesList)
+        return response.status;
+    }
+    catch (e) {
+        console.error(e);
+    } 
+}
+
