@@ -1,5 +1,6 @@
 export class Task {
-    constructor(description, completed = false) {
+    constructor(id, description, completed = false) {
+        this.id = id;
         this.description = description;
         this.completed = completed;
     }
@@ -10,5 +11,9 @@ export class Task {
 
     getDescription() {
         return this.description;
+    }
+
+    getId() {
+        return this.id;
     }
 }

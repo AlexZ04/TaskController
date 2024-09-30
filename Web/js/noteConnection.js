@@ -23,7 +23,7 @@ export async function fetchOneNote(id) {
 export async function addNote(note) {
     try {
         var response = await axios.post(`https://localhost:7178/Tasks`, note)
-        return response.status;
+        return response.data;
     }
     catch (e) {
         console.error(e);
