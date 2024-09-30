@@ -1,0 +1,12 @@
+.shake {
+    animation: anim 0.2s;
+
+    animation-iteration-count: infinite;
+}
+
+@keyframes anim {
+    0% { transform: translate(-1px, -2px); }
+    33% { transform: translate(1px, 2px); }
+    66% { transform: translate(-2px, 0px); }
+    100% { transform: translate(1px, -2px); }
+}

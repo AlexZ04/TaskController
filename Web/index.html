@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To-Do List</title>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <script type="module" src="js/list.js" defer></script>
+        <script type="module" src="js/noteConnection.js" defer></script>
+
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/menu.css" />
+        <link rel="stylesheet" href="styles/tasks.css" />
+        <link rel="stylesheet" href="styles/checkbox.css" />
+        <link rel="stylesheet" href="styles/dialog.css" />
+        <link rel="stylesheet" href="styles/file-input.css" />
+        <link rel="stylesheet" href="styles/animation.css" />
+        <link rel="stylesheet" href="styles/scrollbar.css" />
+        <link rel="stylesheet" href="styles/placeholder.css" />
+
+        <link rel="stylesheet" href="./libs/Toast/toast.min.css">
+        <script src="./libs/Toast/toast.min.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h2>Список дел</h2>
+            <div class="empty-tasks-container"><p><em>Пока здесь пусто...</em></p></div>
+
+            <div class="existing-tasks">
+                <span class="task-description left">Нужно сделать</span>
+
+                <div class="not-completed-container list-task">
+                    <ul></ul>
+                </div>
+                <div class="completed-container list-task">
+                    <ul></ul>
+                </div>
+
+                <span class="task-description right">Выполнено</span>
+            </div>
+
+            <div class="menu">
+                <button id="add-task" class="menu-button add"></button>
+                <button id="save" class="menu-button save"></button>
+                <input type="file" accept=".json" id="text-input" class="file-input">
+                <label for="text-input" class="custom-file-input"></label>
+            </div>
+
+            <dialog id="create-dialog">
+                <div class="create-task-container">
+
+                    <div class="text-place">
+                        <label for="task-text">Текст дела:</label>
+                        <input type="text" id="task-text" autocomplete="off" placeholder="Введите текст дела">
+                    </div>
+
+                    <div class="checkbox-place">
+                        <label for="is-completed">Выполнено ли дело:</label>
+                        <input type="checkbox" id="is-completed" class="add-task-checkbox">
+                        <label for="is-completed" class="custom-checkbox add-check-label"></label>
+                    </div>
+
+                    <div class="buttons-place">
+                        <button id="submit-create">Создать дело</button>
+                        <button id="cancel">Отменить</button>
+                    </div>
+
+                </div>
+            </dialog>
+
+            <dialog id="edit-dialog">
+                <div class="edit-task-container">
+                    <div class="text-place">
+                        <label for="task-edit-text">Новый текст:</label>
+                        <input type="text" id="task-edit-text" autocomplete="off" placeholder="Введите новый текст">
+                    </div>
+
+                    <div class="buttons-place">
+                        <button id="submit-edit">Изменить</button>
+                        <button id="cancel-edit">Отменить</button>
+                    </div>
+                </div>
+            </dialog>
+
+            <button id="info-button" class="menu-button info"></button>
+            <dialog id="info-dialog">
+                <p>Список дел. Здесь можно добавить дело, изменить и удалить его.</p>
+                <p>Для добавления нажмите на плюсик.</p>
+                <p>Чтобы сохранить список дел, нажмите на кнопку сохранения. Вы можете загрузить эти файлы позже.</p>
+                <button id="close-dialog" class="menu-button close"></button>
+            </dialog>
+        </div>
+    </body>
+</html>

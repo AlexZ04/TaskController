@@ -1,0 +1,7 @@
+.hold {
+    opacity: 0.6;
+
+    border: thick double #d4d0d0;
+    color: #130404e7;
+    background-color: rgb(247, 241, 241);
+}

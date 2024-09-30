@@ -1,0 +1,81 @@
+.menu {
+    /* border: 1px solid black; */
+    /* height: 10vh; */
+    width: calc(80vw + 20px);
+    position: relative;
+
+    margin: 0 10vw;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.info {
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+    
+    background-image: url("../img/info.jpg");
+
+    border-radius: 50%;
+    border: 1px solid black;
+
+    height: 40px;
+    width: 40px;
+
+    font-size: large;
+
+    transition: 0.3s ease-in;
+
+}  
+
+.info:hover, .menu-button:hover, .custom-file-input:hover {
+    transform: scale(1.2);
+}
+
+.menu-button {
+    background-color: white;
+
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    transition: 0.3s transform ease-in;
+}
+
+.save {
+    background-image: url("../img/save.png");
+
+    position: fixed;
+    right: 10vw;
+    bottom: 5vh;
+}
+
+.add {
+    background-image: url("../img/plus.png");
+
+    position: fixed;
+    left: 5vw;
+    bottom: 5vh;
+
+    width: 80px;
+    height: 80px;
+}
+
+.close {
+    background-image: url("../img/close.png");
+    width: 30px;
+    height: 30px;
+
+    background-size: 60%;
+}
+
+button {
+    border: 1px solid black;
+}

@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
+    justify-content: center;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.empty-tasks-container p {
+    font-size: 4rem;
+
+    line-height: 50vh;
+
+}
+
+@media (max-width: 700px) {
+    .empty-tasks-container p {
+        font-size: 2rem;
+    }
+}
+
+.empty-tasks-container {
+    display: none;
+    border-radius: 10px;
+    border: 1px solid black;
+
+    height: 70vh;
+    width: calc(80vw + 20px);
+    margin: 0 10vw;
+    text-align: center;
+}
+
+.existing-tasks {
+    display: flex;
+
+    margin: 0 10vw;
+    margin-bottom: 30px;
+    width: calc(80vw + 20px);
+}
+
+
+.not-completed-container {
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.completed-container {
+    background-color:white;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+.list-task {
+    display: none;
+    height: 70vh;
+    width: 40vw;
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    /* margin: 0 10px; */
+
+    padding: 5px 10px;
+
+    overflow: hidden;
+}
+
+
+.list-task:hover {
+    overflow: auto;
+}
+
+.task-description {
+    text-align: center;
+    margin: 0;
+    height: 0;
+    /* width: 70vh; */
+    /* width: 0; */
+    font-size: large;
+    font-style: italic;
+    text-align: center;
+
+    margin-top: 30vh;
+}
+
+.left {
+    transform: rotate(-90deg);
+}
+
+.right {
+    transform: rotate(90deg);
+}

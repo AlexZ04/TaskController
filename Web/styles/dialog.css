@@ -1,0 +1,62 @@
+dialog {
+    font-size: large;
+    border-radius: 10px;
+}
+
+input[type="text"] {
+    padding: 5px 5px;
+    font-size: medium;
+
+    border: 2px solid black;
+
+    transition: 0.3s ease-in;
+}
+
+input[type="text"]::placeholder {
+    font-style: italic;
+}
+
+dialog label:hover + input[type="text"] {
+    background-color: rgb(236, 232, 232);
+}
+
+dialog button {
+    background-color: white;
+    height: 30px;
+    width: 100px;
+}
+
+dialog button {
+    background-color: white;
+    height: 30px;
+    width: 100px;
+
+    font-weight: 500;
+
+    transition: 0.3s background-color ease-in;
+}
+
+dialog button:hover {
+    background-color: rgb(236, 232, 232);
+}
+
+dialog div {
+    margin-bottom: 10px;
+}
+
+.create-task-container, .buttons-place, .edit-task-container {
+    margin-bottom: 0;
+}
+
+.buttons-place {
+    text-align: center;
+}
+
+.text-place label, .checkbox-place label {
+    margin-right: 3px;
+}
+
+.add-check-label {
+    margin-left: 3px;
+    position: absolute;
+}
