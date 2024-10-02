@@ -1,0 +1,6 @@
+[submodule "ToDOList-Mobile"]
+	path = ToDOList-Mobile
+	url = https://github.com/AlexZ04/ToDOList-Mobile.git
+[submodule "ToDoList-API"]
+	path = ToDoList-API
+	url = https://github.com/AlexZ04/ToDoList-API.git
